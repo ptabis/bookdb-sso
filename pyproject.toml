@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "bookdb-sso"
+version = "0.1.0"
+description = "SSO module for bookdb"
+authors = ["Patryk Tabiś <p.tabis@protonmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.70.0"
+uvicorn = "^0.15.0"
+python-multipart = "^0.0.5"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+redis = "^4.0.1"
+hiredis = "^2.0.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.11b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
