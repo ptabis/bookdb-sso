@@ -1,0 +1,18 @@
+{% extends "base.html.jinja" %}
+
+{% block body %}
+<div id="login-box">
+    <div class="flex-column">
+        <h1>bookdb sso</h1>
+        <form class="flex-column">
+            <input type="text" placeholder="login">
+            <input type="password" placeholder="password">
+            <input type="password" placeholder="repeat password">
+            <div class="flex-row">
+                <input type="submit" value="sign up" id="sign-up-submit">
+                <a href="/" id="sign-in-link">sign in</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
