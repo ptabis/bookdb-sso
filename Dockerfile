@@ -22,4 +22,6 @@ FROM base AS final
 
 COPY --from=builder /venv /venv
 COPY app/ app/
-CMD ["/venv/bin/uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+EXPOSE 80
+CMD ["/venv/bin/uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-headers"]
