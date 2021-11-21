@@ -52,7 +52,7 @@ if (SIGN_UP_SUBMIT_BUTTON) {
             return -1;
         }
 
-        if (PASSWORD.value.length == 0 || PASSWORD_INPUT.value != RE_PASSWORD_INPUT.value) {
+        if (PASSWORD_INPUT.value.length == 0 || PASSWORD_INPUT.value != RE_PASSWORD_INPUT.value) {
             return -1;
         }
 
