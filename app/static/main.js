@@ -39,7 +39,7 @@ if (SIGN_IN_SUBMIT_BUTTON) {
 
         const response_json = await response.json();
 
-        if (response_json.access_token.length > 0) {
+        if (response_json !== null && response_json.access_token.length > 0) {
             window.location.reload();
         }
     });

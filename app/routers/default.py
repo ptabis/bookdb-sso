@@ -28,9 +28,14 @@ def login(form_data: OAuth2PasswordRequestForm = Depends()):
         token = Token()
         data = token.create_token({"username": form_data.username})
     else:
-        data = ""
-    response = JSONResponse(content={"access_token": data, "token_type": "bearer"})
-    response.set_cookie(key="access_token", value=data)
+        data = None
+
+    if data is not None:
+        response = JSONResponse(content={"access_token": data, "token_type": "bearer"})
+        response.set_cookie(key="access_token", value=data)
+    else:
+        response = JSONResponse()
+
     return response
 
 
