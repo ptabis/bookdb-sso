@@ -47,7 +47,11 @@ def authenticate(
 ):
     referer = request.headers.get("referer")
 
-    if referer == site and referer in config.hosts_whitelist:
+    if (
+        (referer == site or site in config.hosts_whitelist)
+        and referer in config.hosts_whitelist
+        and access_token is not None
+    ):
         return RedirectResponse(f"{referer}/auth?token={access_token}")
 
     return RedirectResponse(f"/?site={referer}")
