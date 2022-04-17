@@ -5,14 +5,14 @@ from app.utils.config import config
 from app.utils.basedir import BASE_DIR
 from pathlib import Path
 
-if config.docker == 1:
-    openapi_url = None
-    docs_url = None
-    redoc_url = None
-else:
+if config.dev == 1:
     openapi_url = "/openapi.json"
     docs_url = "/docs"
     redoc_url = "/redoc"
+else:
+    openapi_url = None
+    docs_url = None
+    redoc_url = None
 
 
 app = FastAPI(

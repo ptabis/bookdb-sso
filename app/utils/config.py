@@ -2,7 +2,7 @@ from os import getenv
 
 
 class config:
-    docker = int(getenv("DOCKER") or 0)
+    dev = int(getenv("DEV") or 0)
     hosts_whitelist = tuple(getenv("HOSTS_WHITELIST", "").split(","))
 
     class datasources:
