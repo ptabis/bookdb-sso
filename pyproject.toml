@@ -7,18 +7,18 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-fastapi = "^0.70.0"
-uvicorn = "^0.15.0"
+fastapi = "^0.75.2"
+uvicorn = "^0.17.6"
 python-multipart = "^0.0.5"
 python-jose = {extras = ["cryptography"], version = "^3.3.0"}
 passlib = {extras = ["bcrypt"], version = "^1.7.4"}
-redis = "^4.0.1"
+redis = "^4.2.2"
 hiredis = "^2.0.0"
-Jinja2 = "^3.0.3"
+Jinja2 = "^3.1.1"
 
 [tool.poetry.dev-dependencies]
-black = "^21.11b0"
+black = "^22.3.0"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=1.0.8"]
 build-backend = "poetry.core.masonry.api"
